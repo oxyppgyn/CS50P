@@ -16,13 +16,15 @@
 In deep.py, implement a program that prompts the user for the answer to the Great Question of Life, the Universe and Everything, outputting Yes if the user inputs 42 or (case-insensitively) forty-two or forty two. Otherwise output No.
 """
 
-answer = input("What is the answer to the Great Question of Life, the Universe and Everything? ")
+# Input and convert to string
+answer = str(input("What is the answer to the Great Question of Life, the Universe and Everything? "))
 
-if(answer == "42"):
-    print("Yes")
-if(answer == "fourty-two"): #make case insensitve
-    print("Yes")
-else:
-    print("No")
+# Make lowercase, strip spaces, replace "-" with " "
+answer = answer.lower().strip().replace("_"," ")
 
-#WIP
+# Match to correct case
+match answer:
+    case "fourty two" | "42":
+        print("Yes")
+    case _:
+        print("No")
