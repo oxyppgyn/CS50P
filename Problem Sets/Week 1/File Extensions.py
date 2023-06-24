@@ -20,21 +20,22 @@ If the file’s name ends with some other suffix or has no suffix at all, output
 
 extension = input("Please input file name: ")
 
-#extension = FUNCTION(extension) #need to cut .XXX off of end of text
+# Split file name and extension
+extension = extension.split(".")
 
-if(extension == "gif"):
-    print("image/gif")
-if(extension == "jpg"):
-    print("image/jpeg")
-if(extension == "png"):
-    print("image/png")
-if(extension == "pdf"):
-    print("application/pdf")
-if(extension == "txt"):
-    print("text/plain")
-if(extension == "zip"):
-    print("application/zip")
-else:
-    print("application/octet-stream")
-
-# WIP
+# Match to correct case
+match extension[-1]:
+    case "gif":
+        print("image/gif")
+    case "jpg" | "jpeg":
+        print("image/jpeg")
+    case "png":
+        print("image/png")
+    case "pdf":
+        print("application/pdf")
+    case"txt":
+        print("text/plain")
+    case "zip":
+        print("application/zip")
+    case _:
+        print("application/octet-stream")

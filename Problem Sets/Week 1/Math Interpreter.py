@@ -12,8 +12,18 @@ Note that, just as python itself is an interpreter for Python, so will your inte
 """
 
 eqn = input("Input your expression. ")
-eqn = float(eqn) #cannot convert to float
+x, y, z = eqn.split()
 
-(f"{eqn:.1f}")
+x = float(x)
+z = float(z)
 
-# WIP
+if y == "+":
+    print(x + z)
+elif y == "-":
+    print(x - z)
+elif y == "*":
+    print(x * z)
+elif y == ("/"):
+    print(x / z)
+else:
+    print("ERROR")
