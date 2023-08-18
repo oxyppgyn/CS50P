@@ -1,4 +1,4 @@
-# CS50P
+# [CS50P](https://cs50.harvard.edu/python/2022/)
 My notes and problem sets from CS50P (non-certificate route). Note that the contents of this repository are open to use by others, but be sure to not violate academic integrity of the CS50P course if you plan to complete the certificate course. See the below pasted [academic integrity policy](https://cs50.harvard.edu/python/2022/honesty/).
 
 ## Policy
